@@ -1,0 +1,50 @@
+//데이터베이스 생성
+show databases;
+
+CREATE database poker_DB default character SET UTF8;
+
+use poker_DB;
+
+CREATE table poker_user
+(
+id varchar(32) PRIMARY KEY not null,
+passwd varchar(32) not null,
+id_win int(11) not null,
+id_lose int(11) not null,
+id_status int(11) not null 
+)ENGINE=InnoDB;
+#id는 아이디, passwd는 비번, id_win는 승수, id_lose는 패수
+#id_status는 회원의 현재 상태를 표시!, 0은 로그아웃 1은 접속중
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest1','12345','20','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest2','12345','21','13','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest3','12345','20','14','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest4','12345','19','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest5','12345','2','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest6','12345','30','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest7','12345','10','22','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest8','12345','20','16','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest9','12345','17','17','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest10','12345','22','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest11','12345','26','16','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest12','12345','22','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest13','12345','20','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest14','12345','20','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest15','12345','20','19','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest16','12345','20','18','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest17','12345','19','13','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest18','12345','21','33','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest19','12345','20','14','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest20','12345','29','12','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest21','12345','27','15','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest22','12345','20','20','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest23','12345','25','15','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest24','12345','19','15','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest25','12345','30','18','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest26','12345','17','13','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest27','12345','15','17','0');
+insert into poker_user(id, passwd, id_win, id_lose, id_status) value('guest28','12345','23','12','0');
+
+select * from poker_user;
+
+//데이터베이스 설정
+Server 프로젝트 Data 패키지의 UserDBManager 클래스에서 교수님 컴퓨터 환경에 맞는 DBMS 아이디/비밀번호를 설정하시면 됩니다
